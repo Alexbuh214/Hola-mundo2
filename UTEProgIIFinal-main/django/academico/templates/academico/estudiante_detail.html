@@ -1,0 +1,33 @@
+{% extends 'academico/base.html' %}
+{% block title %}Detalle del estudiante{% endblock %}
+{% block content %}
+    <p><strong>Nombre:</strong> {{ estudiante.name }}</p>
+    <p><strong>Cédula:</strong> {{ estudiante.cedula }}</p>
+    <p><strong>Carrera:</strong> {{ estudiante.carrera_id.name }}</p>
+    <p><strong>Estado:</strong> {{ estudiante.get_estado_display }}</p>
+    <p><strong>Email:</strong> {{ estudiante.email }}</p>
+    <p><strong>Teléfono:</strong> {{ estudiante.telefono }}</p>
+    <h3>Matrículas</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Periodo</th>
+                <th>Asignatura</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for matricula in matriculas %}
+                <tr>
+                    <td>{{ matricula.name }}</td>
+                    <td>{{ matricula.periodo }}</td>
+                    <td>{{ matricula.asignatura }}</td>
+                    <td>{{ matricula.get_estado_display }}</td>
+                </tr>
+            {% empty %}
+                <tr><td colspan="4">No hay matrículas registradas.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

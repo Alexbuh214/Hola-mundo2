@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_ute_matricula_list" model="ir.ui.view">
+        <field name="name">ute.matricula.list</field>
+        <field name="model">ute.matricula</field>
+        <field name="arch" type="xml">
+            <list string="Matrículas">
+                <field name="name"/>
+                <field name="estudiante_id"/>
+                <field name="periodo"/>
+                <field name="asignatura"/>
+                <field name="creditos"/>
+                <field name="estado"/>
+                <field name="total"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_ute_matricula_form" model="ir.ui.view">
+        <field name="name">ute.matricula.form</field>
+        <field name="model">ute.matricula</field>
+        <field name="arch" type="xml">
+            <form string="Matrícula">
+                <header>
+                    <button name="action_confirmar" string="Confirmar" type="object" class="btn-primary"/>
+                    <button name="action_anular" string="Anular" type="object" class="btn-danger"/>
+                    <field name="estado" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="estudiante_id"/>
+                        <field name="periodo"/>
+                        <field name="asignatura"/>
+                        <field name="creditos"/>
+                        <field name="costo_credito"/>
+                        <field name="total"/>
+                        <field name="fecha"/>
+                        <field name="observacion"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_ute_matricula" model="ir.actions.act_window">
+        <field name="name">Matrículas</field>
+        <field name="res_model">ute.matricula</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

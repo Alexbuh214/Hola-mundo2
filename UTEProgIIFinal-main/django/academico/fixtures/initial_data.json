@@ -1,0 +1,170 @@
+[
+  {
+    "model": "academico.carrera",
+    "pk": 1,
+    "fields": {
+      "name": "Ingeniería de Sistemas",
+      "codigo": "IS1001",
+      "modalidad": "presencial",
+      "duracion_semestres": 8,
+      "cupo_maximo": 40,
+      "activa": true
+    }
+  },
+  {
+    "model": "academico.carrera",
+    "pk": 2,
+    "fields": {
+      "name": "Administración",
+      "codigo": "AD2002",
+      "modalidad": "semipresencial",
+      "duracion_semestres": 8,
+      "cupo_maximo": 35,
+      "activa": true
+    }
+  },
+  {
+    "model": "academico.estudiante",
+    "pk": 1,
+    "fields": {
+      "name": "Carlos Ruiz",
+      "cedula": "1712345678",
+      "email": "carlos@example.com",
+      "telefono": "0999999999",
+      "fecha_nacimiento": "2000-02-15",
+      "genero": "M",
+      "carrera_id": 1,
+      "fecha_ingreso": "2026-01-10",
+      "estado": "activo",
+      "notas": ""
+    }
+  },
+  {
+    "model": "academico.estudiante",
+    "pk": 2,
+    "fields": {
+      "name": "Ana Morales",
+      "cedula": "1712345679",
+      "email": "ana@example.com",
+      "telefono": "0988888888",
+      "fecha_nacimiento": "2001-07-20",
+      "genero": "F",
+      "carrera_id": 1,
+      "fecha_ingreso": "2026-01-12",
+      "estado": "activo",
+      "notas": ""
+    }
+  },
+  {
+    "model": "academico.estudiante",
+    "pk": 3,
+    "fields": {
+      "name": "Luis Ortega",
+      "cedula": "1712345680",
+      "email": "luis@example.com",
+      "telefono": "0977777777",
+      "fecha_nacimiento": "1999-11-03",
+      "genero": "M",
+      "carrera_id": 2,
+      "fecha_ingreso": "2026-01-15",
+      "estado": "egresado",
+      "notas": ""
+    }
+  },
+  {
+    "model": "academico.estudiante",
+    "pk": 4,
+    "fields": {
+      "name": "Marta Flores",
+      "cedula": "1712345681",
+      "email": "marta@example.com",
+      "telefono": "0966666666",
+      "fecha_nacimiento": "2002-03-22",
+      "genero": "F",
+      "carrera_id": 2,
+      "fecha_ingreso": "2026-01-18",
+      "estado": "activo",
+      "notas": ""
+    }
+  },
+  {
+    "model": "academico.matricula",
+    "pk": 1,
+    "fields": {
+      "name": "MAT-001",
+      "estudiante_id": 1,
+      "periodo": "2026-01",
+      "asignatura": "Programación II",
+      "creditos": 3,
+      "costo_credito": "25.00",
+      "total": "75.00",
+      "fecha": "2026-01-20",
+      "estado": "confirmada",
+      "observacion": ""
+    }
+  },
+  {
+    "model": "academico.matricula",
+    "pk": 2,
+    "fields": {
+      "name": "MAT-002",
+      "estudiante_id": 1,
+      "periodo": "2026-02",
+      "asignatura": "Base de Datos",
+      "creditos": 4,
+      "costo_credito": "25.00",
+      "total": "100.00",
+      "fecha": "2026-02-10",
+      "estado": "borrador",
+      "observacion": ""
+    }
+  },
+  {
+    "model": "academico.matricula",
+    "pk": 3,
+    "fields": {
+      "name": "MAT-003",
+      "estudiante_id": 2,
+      "periodo": "2026-01",
+      "asignatura": "Sistemas Operativos",
+      "creditos": 3,
+      "costo_credito": "25.00",
+      "total": "75.00",
+      "fecha": "2026-01-20",
+      "estado": "confirmada",
+      "observacion": ""
+    }
+  },
+  {
+    "model": "academico.matricula",
+    "pk": 4,
+    "fields": {
+      "name": "MAT-004",
+      "estudiante_id": 3,
+      "periodo": "2026-02",
+      "asignatura": "Contabilidad",
+      "creditos": 2,
+      "costo_credito": "25.00",
+      "total": "50.00",
+      "fecha": "2026-02-12",
+      "estado": "anulada",
+      "observacion": ""
+    }
+  },
+  {
+    "model": "academico.matricula",
+    "pk": 5,
+    "fields": {
+      "name": "MAT-005",
+      "estudiante_id": 4,
+      "periodo": "2026-01",
+      "asignatura": "Marketing",
+      "creditos": 4,
+      "costo_credito": "25.00",
+      "total": "100.00",
+      "fecha": "2026-01-22",
+      "estado": "borrador",
+      "observacion": ""
+    }
+  }
+]

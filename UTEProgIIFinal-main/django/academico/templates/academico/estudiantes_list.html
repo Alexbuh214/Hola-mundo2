@@ -1,0 +1,26 @@
+{% extends 'academico/base.html' %}
+{% block title %}Estudiantes{% endblock %}
+{% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Cédula</th>
+                <th>Carrera</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for estudiante in estudiantes %}
+                <tr>
+                    <td><a href="{% url 'estudiante_detail' estudiante.pk %}">{{ estudiante.name }}</a></td>
+                    <td>{{ estudiante.cedula }}</td>
+                    <td>{{ estudiante.carrera_id.name }}</td>
+                    <td>{{ estudiante.get_estado_display }}</td>
+                </tr>
+            {% empty %}
+                <tr><td colspan="4">No hay estudiantes registrados.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
